@@ -6,7 +6,7 @@
     },
     {
       "name": "carbon-core",
-      "version>=": "2.5.0"
+      "version>=": "3.0.0"
     },
     {
       "name": "carbon-exefile-interpreter",
@@ -14,10 +14,6 @@
     }
   ],
   "overrides": [
-    {
-      "name": "protobuf",
-      "version": "3.6.0.1"
-    },
     {
       "name": "openssl",
       "version": "1.1.1k#8"
