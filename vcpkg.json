@@ -6,10 +6,11 @@
     },
     {
       "name": "carbon-core",
-      "version>=": "3.0.0"
+      "version>=": "3.1.0"
     },
     {
       "name": "carbon-exefile-interpreter",
+      "version>=": "1.1.1",
       "host": true
     }
   ],
