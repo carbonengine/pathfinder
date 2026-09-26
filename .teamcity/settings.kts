@@ -1,5 +1,44 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 // Copyright © 2025 CCP ehf.
 
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.Project
 

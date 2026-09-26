@@ -12,7 +12,59 @@ you would like to use.
 
 Most of these are optional, except for `CcpMinimumTargetPlatform.cmake` which is required in order to guarantee that your C++ code runs our supported platforms.
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 - CcpBuildConfigurations.cmake: defines supported build configurations with all relevant compiler switches; also known as flavors
+=======
+- CcpBuildConfigurations.cmake: defines supported build configurations with all relevant compiler switches; also known as [flavors](https://wiki.ccpgames.com/pages/viewpage.action?pageId=167285354#Glossary-Flavor)
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+- CcpBuildConfigurations.cmake: defines supported build configurations with all relevant compiler switches; also known as [flavors](https://wiki.ccpgames.com/pages/viewpage.action?pageId=167285354#Glossary-Flavor)
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+- CcpBuildConfigurations.cmake: defines supported build configurations with all relevant compiler switches; also known as [flavors](https://wiki.ccpgames.com/pages/viewpage.action?pageId=167285354#Glossary-Flavor)
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+- CcpBuildConfigurations.cmake: defines supported build configurations with all relevant compiler switches; also known as [flavors](https://wiki.ccpgames.com/pages/viewpage.action?pageId=167285354#Glossary-Flavor)
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+- CcpBuildConfigurations.cmake: defines supported build configurations with all relevant compiler switches; also known as [flavors](https://wiki.ccpgames.com/pages/viewpage.action?pageId=167285354#Glossary-Flavor)
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+- CcpBuildConfigurations.cmake: defines supported build configurations with all relevant compiler switches; also known as [flavors](https://wiki.ccpgames.com/pages/viewpage.action?pageId=167285354#Glossary-Flavor)
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+- CcpBuildConfigurations.cmake: defines supported build configurations with all relevant compiler switches; also known as [flavors](https://wiki.ccpgames.com/pages/viewpage.action?pageId=167285354#Glossary-Flavor)
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+- CcpBuildConfigurations.cmake: defines supported build configurations with all relevant compiler switches; also known as [flavors](https://wiki.ccpgames.com/pages/viewpage.action?pageId=167285354#Glossary-Flavor)
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+- CcpBuildConfigurations.cmake: defines supported build configurations with all relevant compiler switches; also known as [flavors](https://wiki.ccpgames.com/pages/viewpage.action?pageId=167285354#Glossary-Flavor)
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+- CcpBuildConfigurations.cmake: defines supported build configurations with all relevant compiler switches; also known as [flavors](https://wiki.ccpgames.com/pages/viewpage.action?pageId=167285354#Glossary-Flavor)
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+- CcpBuildConfigurations.cmake: defines supported build configurations with all relevant compiler switches; also known as [flavors](https://wiki.ccpgames.com/pages/viewpage.action?pageId=167285354#Glossary-Flavor)
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+- CcpBuildConfigurations.cmake: defines supported build configurations with all relevant compiler switches; also known as [flavors](https://wiki.ccpgames.com/pages/viewpage.action?pageId=167285354#Glossary-Flavor)
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+- CcpBuildConfigurations.cmake: defines supported build configurations with all relevant compiler switches; also known as [flavors](https://wiki.ccpgames.com/pages/viewpage.action?pageId=167285354#Glossary-Flavor)
+>>>>>>> template/carbonengine/pathfinder-updates
 - CcpMinimumTargetPlatform.cmake: configures key CMake variables to be correct for our target platforms
 - CcpPacIdentifiers.cmake: provides variables containing our platform, architecture and compiler identifiers
 - PyTestDiscoverTests.cmake: allows running pytest tests through ctest

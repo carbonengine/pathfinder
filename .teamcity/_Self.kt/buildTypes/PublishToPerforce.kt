@@ -1,8 +1,65 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 // Copyright © 2025 CCP ehf.
 
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
 package _Self.buildTypes
 
 import jetbrains.buildServer.configs.kotlin.*
+=======
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+package _Self.buildTypes
+
+import jetbrains.buildServer.configs.kotlin.*
+import jetbrains.buildServer.configs.kotlin.buildFeatures.pullRequests
+<<<<<<< HEAD
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+package _Self.buildTypes
+
+import jetbrains.buildServer.configs.kotlin.*
+import jetbrains.buildServer.configs.kotlin.buildFeatures.PullRequests
+import jetbrains.buildServer.configs.kotlin.buildFeatures.pullRequests
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
 import jetbrains.buildServer.configs.kotlin.buildFeatures.vcsLabeling
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
 import jetbrains.buildServer.configs.kotlin.buildSteps.python
@@ -29,11 +86,81 @@ class Publish(perforce_publish_path: String) : BuildType({
         param("env.TC_BUILD_URL", "%teamcity.serverUrl%/viewLog.html?buildId=%teamcity.build.id%")
         text("eve_branch_shortname", "", label = "Branch Name", description = """The name of the branch, for example MAINLINE""", display = ParameterDisplay.PROMPT, allowEmpty = false)
         param("env.TC_BUILDID", "%teamcity.build.id%")
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
         param("env.TC_BUILD_NUMBER", "Carbon Pathfinder #%build.number%")
+=======
+        param("env.TC_BUILD_NUMBER", "Carbon Template #%build.number%")
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+        param("env.TC_BUILD_NUMBER", "Carbon Template #%build.number%")
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+        param("env.TC_BUILD_NUMBER", "Carbon Template #%build.number%")
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+        param("env.TC_BUILD_NUMBER", "Carbon Template #%build.number%")
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+        param("env.TC_BUILD_NUMBER", "Carbon Template #%build.number%")
+>>>>>>> template/carbonengine/pathfinder-updates
         param("env.P4PORT", "p4is.ccp.ad.local:1666")
         param("env.TC_EVE_BRANCH_SHORTNAME", "%eve_branch_shortname%")
         param("env.TC_EVE_PROJECT", "%project%")
         param("carbon-pipeline-tools-ref", "refs/heads/main")
+=======
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+        param("env.TC_BUILD_NUMBER", "Carbon Template #%build.number%")
+        param("env.P4PORT", "p4is.ccp.ad.local:1666")
+        param("env.TC_EVE_BRANCH_SHORTNAME", "%eve_branch_shortname%")
+        param("env.TC_EVE_PROJECT", "%project%")
+        param("carbon-pipeline-tools-ref", "refs/tags/v0.1.0")
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
         select("eve_branch_path", "//%project%/%eve_branch_shortname%/", label = "Perforce branch", description = "Is this a regular perforce branch or a perforce stream? Used for setting the proper branch path.", display = ParameterDisplay.PROMPT,
                 options = listOf("Regular" to "//%project%/branches/%eve_branch_type%/%eve_branch_shortname%/", "Frontier Stream" to "//%project%/%eve_branch_shortname%/"))
         select("eve_branch_type", "sandbox", label = "Branch type", description = "The type of branch to publish into", display = ParameterDisplay.PROMPT,
@@ -47,6 +174,30 @@ class Publish(perforce_publish_path: String) : BuildType({
     }
 
     vcs {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        root(DslContext.settingsRootId, "-:.")
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+        root(DslContext.settingsRootId, "-:.")
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+        root(DslContext.settingsRootId, "-:.")
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+        root(DslContext.settingsRootId, "-:.")
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+        root(DslContext.settingsRootId, "-:.")
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+        root(DslContext.settingsRootId, "-:.")
+>>>>>>> template/carbonengine/pathfinder-updates
         root(AbsoluteId("CarbonPipelineTools"), "+:carbon/.=>carbon")
 
         checkoutMode = CheckoutMode.ON_AGENT
@@ -210,7 +361,55 @@ class Publish(perforce_publish_path: String) : BuildType({
             }
 
             artifacts {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
                 artifactRules = "**/*=>%perforce_path_to_publish_into%/${MacOS.arm64_Release.depParamRefs["env.GIT_TAG_HASH"]}"
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${MacOS.arm64_Release.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${MacOS.arm64_Release.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${MacOS.arm64_Release.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${MacOS.arm64_Release.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${MacOS.arm64_Release.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${MacOS.arm64_Release.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${MacOS.arm64_Release.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${MacOS.arm64_Release.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${MacOS.arm64_Release.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${MacOS.arm64_Release.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${MacOS.arm64_Release.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${MacOS.arm64_Release.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
             }
         }
         dependency(Windows.Debug) {
@@ -219,7 +418,55 @@ class Publish(perforce_publish_path: String) : BuildType({
             }
 
             artifacts {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
                 artifactRules = "**/*=>%perforce_path_to_publish_into%/${Windows.Debug.depParamRefs["env.GIT_TAG_HASH"]}"
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Windows.Debug.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Windows.Debug.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Windows.Debug.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Windows.Debug.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Windows.Debug.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Windows.Debug.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Windows.Debug.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Windows.Debug.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Windows.Debug.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Windows.Debug.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Windows.Debug.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Windows.Debug.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
             }
         }
         dependency(Windows.Internal) {
@@ -228,7 +475,55 @@ class Publish(perforce_publish_path: String) : BuildType({
             }
 
             artifacts {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
                 artifactRules = "**/*=>%perforce_path_to_publish_into%/${Windows.Internal.depParamRefs["env.GIT_TAG_HASH"]}"
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Windows.Internal.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Windows.Internal.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Windows.Internal.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Windows.Internal.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Windows.Internal.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Windows.Internal.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Windows.Internal.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Windows.Internal.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Windows.Internal.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Windows.Internal.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Windows.Internal.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Windows.Internal.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
             }
         }
         dependency(Windows.Release) {
@@ -237,7 +532,55 @@ class Publish(perforce_publish_path: String) : BuildType({
             }
 
             artifacts {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
                 artifactRules = "**/*=>%perforce_path_to_publish_into%/${Windows.Release.depParamRefs["env.GIT_TAG_HASH"]}"
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Windows.Release.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Windows.Release.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Windows.Release.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Windows.Release.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Windows.Release.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Windows.Release.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Windows.Release.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Windows.Release.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Windows.Release.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Windows.Release.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Windows.Release.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Windows.Release.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
             }
         }
         dependency(Windows.TrinityDev) {
@@ -246,7 +589,55 @@ class Publish(perforce_publish_path: String) : BuildType({
             }
 
             artifacts {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
                 artifactRules = "**/*=>%perforce_path_to_publish_into%/${Windows.TrinityDev.depParamRefs["env.GIT_TAG_HASH"]}"
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Windows.TrinityDev.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Windows.TrinityDev.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Windows.TrinityDev.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Windows.TrinityDev.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Windows.TrinityDev.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Windows.TrinityDev.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Windows.TrinityDev.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Windows.TrinityDev.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Windows.TrinityDev.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Windows.TrinityDev.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Windows.TrinityDev.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                artifactRules = "artifact.zip!**=>%perforce_path_to_publish_into%/${Windows.TrinityDev.depParamRefs["env.GIT_TAG_HASH"]}"
+>>>>>>> template/carbonengine/pathfinder-updates
             }
         }
         artifacts(AbsoluteId("Infrastructure_MetaTeamCity_Tools_TeamcityChanges")) {
@@ -255,10 +646,123 @@ class Publish(perforce_publish_path: String) : BuildType({
         }
     }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+    features {
+        pullRequests {
+            vcsRootExtId = "${DslContext.settingsRootId.id}"
+            provider = github {
+                authType = token {
+                    token = "%GITHUB_CARBON_PAT%"
+                }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                filterAuthorRole = PullRequests.GitHubRoleFilter.EVERYBODY
+=======
+                filterAuthorRole = GitHubRoleFilter.EVERYBODY
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                filterAuthorRole = PullRequests.GitHubRoleFilter.EVERYBODY
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                filterAuthorRole = PullRequests.GitHubRoleFilter.EVERYBODY
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                filterAuthorRole = PullRequests.GitHubRoleFilter.EVERYBODY
+>>>>>>> template/carbonengine/pathfinder-updates
+            }
+        }
+    }
+    
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
     requirements {
         contains("teamcity.agent.jvm.os.name", "Windows")
         doesNotContain("teamcity.agent.name", "TEST-AUTOM")
     }
 })
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 val PublishToPerforce = Publish("vendor/github.com/ccpgames/carbon-pathfinder")
+=======
+val PublishToPerforce = Publish("vendor/github.com/ccpgames/carbon-template")
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+val PublishToPerforce = Publish("vendor/github.com/ccpgames/carbon-template")
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+val PublishToPerforce = Publish("vendor/github.com/ccpgames/carbon-template")
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+val PublishToPerforce = Publish("vendor/github.com/ccpgames/carbon-template")
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+val PublishToPerforce = Publish("vendor/github.com/ccpgames/carbon-template")
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+val PublishToPerforce = Publish("vendor/github.com/ccpgames/carbon-template")
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+val PublishToPerforce = Publish("vendor/github.com/ccpgames/carbon-template")
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+val PublishToPerforce = Publish("vendor/github.com/ccpgames/carbon-template")
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+val PublishToPerforce = Publish("vendor/github.com/ccpgames/carbon-template")
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+val PublishToPerforce = Publish("vendor/github.com/ccpgames/carbon-template")
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+val PublishToPerforce = Publish("vendor/github.com/ccpgames/carbon-template")
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+val PublishToPerforce = Publish("vendor/github.com/ccpgames/carbon-template")
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+val PublishToPerforce = Publish("vendor/github.com/ccpgames/carbon-template")
+>>>>>>> template/carbonengine/pathfinder-updates

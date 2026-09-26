@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 # Copyright © 2021 CCP ehf.
 
 cmake_minimum_required(VERSION 3.16)
@@ -42,11 +55,95 @@ target_link_libraries(EvePathfinder PRIVATE BlueExposure)
 set(PUBLIC_HEADER_FILES Include/IEvePathfinderGoal.h)
 
 get_target_property(_SOURCES EvePathfinder SOURCES)
+=======
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+cmake_minimum_required(VERSION 3.16)
+project(CarbonTemplateProject VERSION 1.0.0)
+
+include(cmake/CcpBuildConfigurations.cmake)
+include(cmake/CcpTargetConfigurations.cmake)
+
+ccp_add_library(target_name SHARED)
+
+get_target_property(_SOURCES target_name SOURCES)
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
 source_group(TREE "${CMAKE_CURRENT_SOURCE_DIR}"
         PREFIX "Sources"
         FILES ${_SOURCES}
 )
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 target_compile_definitions(EvePathfinder PRIVATE BLUEBUILD)
 
 target_precompile_headers(EvePathfinder PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/stdafx.h)
@@ -166,3 +263,170 @@ if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
         )
     endif()
 endif()
+=======
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+set_target_properties(target_name PROPERTIES OUTPUT_NAME "_target_name")
+
+target_include_directories(target_name
+        PUBLIC
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+        $<INSTALL_INTERFACE:include>
+)
+
+# Provide an install target if this is the top level project only
+if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
+    # Determine if/when to generate/build documentation. The rules are as follows:
+    # - If running locally - Build documentation is OFF by default
+    # - If running on a build agent (TeamCity) - Build documentation is ON by default
+    # - If -DBUILD_DOCUMENTATION=ON/OFF flag is explicitly set, use it.
+    set(BUILD_DOCUMENTATION_DEFAULT_FLAG OFF)
+    if(DEFINED ENV{TEAMCITY_VERSION})
+        set(BUILD_DOCUMENTATION_DEFAULT_FLAG ON)
+    endif()
+    message(STATUS "Document generation settings: default=${BUILD_DOCUMENTATION_DEFAULT_FLAG}, option BUILD_DOCUMENTATION=${BUILD_DOCUMENTATION}")
+    option(BUILD_DOCUMENTATION "Build Documentation" ${BUILD_DOCUMENTATION_DEFAULT_FLAG})
+
+    if(BUILD_DOCUMENTATION)
+        # Set up sphinx build for Python autodoc comments.
+        set(SPHINX_SOURCE ${CMAKE_CURRENT_SOURCE_DIR}/doc/source)
+        set(SPHINX_BUILD ${CMAKE_CURRENT_BINARY_DIR}/doc/build)
+
+        find_package(Python3 COMPONENTS Interpreter REQUIRED)
+        include(cmake/CcpDocsGenerator.cmake)
+
+        create_carbon_docs_sphinx_target(
+                PYTHON_EXE ${Python3_EXECUTABLE}
+                VENV_NAME docs_generation_venv
+                PYTHONPATH_ENV $ENV{PYTHONPATH}
+                SPHINX_SOURCE ${SPHINX_SOURCE}
+                SPHINX_BUILD ${SPHINX_BUILD}
+                DOXYGEN_SRC_FILES ${SRC_FILES}
+                SPHINX_TARGET_NAME Sphinx
+                DOXYGEN_TARGET_NAME Doxygen
+                INSTALL_DESTINATION documentation
+        )
+
+        add_dependencies(Sphinx target_name)
+    endif()
+
+
+    option(INSTALL_TO_MONOLITH "Install this package to a perforce branch vendor folder - provided for backwards compatability" OFF)
+    if (INSTALL_TO_MONOLITH)
+        include(cmake/CcpMonolithVendorConfig.cmake)
+        include(cmake/CcpPackageConfigHelpers.cmake)
+
+        # Install rule to ensure that our runtime and linker files are in the expected, platform-specific folders
+        install(
+                TARGETS target_name
+                EXPORT package_nameTarget
+                CONFIGURATIONS ${CMAKE_CONFIGURATION_TYPES}
+                LIBRARY DESTINATION ${CCP_VENDOR_LIB_PATH}
+                ARCHIVE DESTINATION ${CCP_VENDOR_LIB_PATH}
+                RUNTIME DESTINATION ${CCP_VENDOR_BIN_PATH}
+        )
+
+        # Generate target configuration for the monolith
+        configure_ccp_vendor_config_file(
+                TARGET target_name
+                DESTINATION "${CMAKE_CURRENT_BINARY_DIR}/package_nameConfig.cmake"
+                DEPENDENCIES ""
+        )
+        install(FILES ${CMAKE_CURRENT_BINARY_DIR}/package_nameConfig.cmake DESTINATION .)
+        install(DIRECTORY python DESTINATION . FILES_MATCHING PATTERN "*.py")
+    else ()
+        # Install rule for available public headers
+        install(
+                TARGETS target_name
+                EXPORT package_nameTarget
+                CONFIGURATIONS ${CMAKE_CONFIGURATION_TYPES}
+                DESTINATION ${CMAKE_INSTALL_PREFIX}/share/package_name
+                ARCHIVE DESTINATION lib
+                LIBRARY DESTINATION lib
+                RUNTIME DESTINATION bin
+        )
+
+        install(EXPORT package_nameTarget
+                DESTINATION share/package_name
+                FILE package_name.cmake
+        )
+
+        install(
+                FILES package_nameConfig.cmake
+                DESTINATION ${CMAKE_INSTALL_PREFIX}/share/package_name)
+    endif()
+
+    install(DIRECTORY include DESTINATION . FILES_MATCHING PATTERN "*.h")
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+endif()
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+endif()
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+endif()
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+endif()
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+endif()
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+endif()
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+endif()
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+endif()
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+endif()
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+endif()
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+endif()
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+endif()
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+endif()
+>>>>>>> template/carbonengine/pathfinder-updates

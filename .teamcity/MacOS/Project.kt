@@ -1,16 +1,79 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 // Copyright © 2025 CCP ehf.
 
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
 package MacOS
 
 import jetbrains.buildServer.configs.kotlin.DslContext
 import jetbrains.buildServer.configs.kotlin.Project
 import jetbrains.buildServer.configs.kotlin.*
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 import jetbrains.buildServer.configs.kotlin.buildFeatures.PullRequests
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
 import jetbrains.buildServer.configs.kotlin.buildFeatures.XmlReport
 import jetbrains.buildServer.configs.kotlin.buildFeatures.commitStatusPublisher
 import jetbrains.buildServer.configs.kotlin.buildFeatures.freeDiskSpace
 import jetbrains.buildServer.configs.kotlin.buildFeatures.nuGetFeedCredentials
 import jetbrains.buildServer.configs.kotlin.buildFeatures.perfmon
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import jetbrains.buildServer.configs.kotlin.buildFeatures.PullRequests
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+import jetbrains.buildServer.configs.kotlin.buildFeatures.PullRequests
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+import jetbrains.buildServer.configs.kotlin.buildFeatures.PullRequests
+>>>>>>> template/carbonengine/pathfinder-updates
 import jetbrains.buildServer.configs.kotlin.buildFeatures.pullRequests
 import jetbrains.buildServer.configs.kotlin.buildFeatures.sshAgent
 import jetbrains.buildServer.configs.kotlin.buildFeatures.xmlReport
@@ -53,7 +116,55 @@ class CarbonBuildMacOS(buildName: String, configType: String, preset: String, ag
     id(buildName.toId())
     name = buildName
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
     artifactRules = "%env.CMAKE_INSTALL_PREFIX%"
+=======
+    artifactRules = "%env.CMAKE_INSTALL_PREFIX% => artifact.zip"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+    artifactRules = "%env.CMAKE_INSTALL_PREFIX% => artifact.zip"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+    artifactRules = "%env.CMAKE_INSTALL_PREFIX% => artifact.zip"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+    artifactRules = "%env.CMAKE_INSTALL_PREFIX% => artifact.zip"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+    artifactRules = "%env.CMAKE_INSTALL_PREFIX% => artifact.zip"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+    artifactRules = "%env.CMAKE_INSTALL_PREFIX% => artifact.zip"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+    artifactRules = "%env.CMAKE_INSTALL_PREFIX% => artifact.zip"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+    artifactRules = "%env.CMAKE_INSTALL_PREFIX% => artifact.zip"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+    artifactRules = "%env.CMAKE_INSTALL_PREFIX% => artifact.zip"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+    artifactRules = "%env.CMAKE_INSTALL_PREFIX% => artifact.zip"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+    artifactRules = "%env.CMAKE_INSTALL_PREFIX% => artifact.zip"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+    artifactRules = "%env.CMAKE_INSTALL_PREFIX% => artifact.zip"
+>>>>>>> template/carbonengine/pathfinder-updates
 
     params {
         param("env.SENTRY_CLI_DEBUG_SYMBOL_TYPE", "dsym")
@@ -152,16 +263,138 @@ class CarbonBuildMacOS(buildName: String, configType: String, preset: String, ag
             vcsRootExtId = "${DslContext.settingsRootId.id}"
             provider = github {
                 authType = token {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
                     token = "%GITHUB_TEAMCITY_TOKEN%"
+=======
+                    token = "%GITHUB_CARBON_PAT%"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                    token = "%GITHUB_CARBON_PAT%"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                    token = "%GITHUB_CARBON_PAT%"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                    token = "%GITHUB_CARBON_PAT%"
+>>>>>>> template/carbonengine/pathfinder-updates
                 }
                 filterAuthorRole = PullRequests.GitHubRoleFilter.MEMBER
+=======
+                    token = "%GITHUB_CARBON_PAT%"
+                }
+                filterAuthorRole = PullRequests.GitHubRoleFilter.EVERYBODY
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                    token = "%GITHUB_CARBON_PAT%"
+                }
+                filterAuthorRole = PullRequests.GitHubRoleFilter.EVERYBODY
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                    token = "%GITHUB_CARBON_PAT%"
+                }
+                filterAuthorRole = PullRequests.GitHubRoleFilter.EVERYBODY
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                    token = "%GITHUB_CARBON_PAT%"
+                }
+                filterAuthorRole = PullRequests.GitHubRoleFilter.EVERYBODY
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                    token = "%GITHUB_CARBON_PAT%"
+                }
+                filterAuthorRole = PullRequests.GitHubRoleFilter.EVERYBODY
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                    token = "%GITHUB_CARBON_PAT%"
+                }
+                filterAuthorRole = GitHubRoleFilter.EVERYBODY
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                    token = "%GITHUB_CARBON_PAT%"
+                }
+                filterAuthorRole = PullRequests.GitHubRoleFilter.EVERYBODY
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                    token = "%GITHUB_CARBON_PAT%"
+                }
+                filterAuthorRole = PullRequests.GitHubRoleFilter.EVERYBODY
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                    token = "%GITHUB_CARBON_PAT%"
+                }
+                filterAuthorRole = PullRequests.GitHubRoleFilter.EVERYBODY
+>>>>>>> template/carbonengine/pathfinder-updates
             }
         }
         commitStatusPublisher {
             publisher = github {
                 githubUrl = "https://api.github.com"
                 authType = personalToken {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
                     token = "%GITHUB_TEAMCITY_TOKEN%"
+=======
+                    token = "%GITHUB_CARBON_PAT%"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                    token = "%GITHUB_CARBON_PAT%"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                    token = "%GITHUB_CARBON_PAT%"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                    token = "%GITHUB_CARBON_PAT%"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                    token = "%GITHUB_CARBON_PAT%"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                    token = "%GITHUB_CARBON_PAT%"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                    token = "%GITHUB_CARBON_PAT%"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                    token = "%GITHUB_CARBON_PAT%"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                    token = "%GITHUB_CARBON_PAT%"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                    token = "%GITHUB_CARBON_PAT%"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                    token = "%GITHUB_CARBON_PAT%"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                    token = "%GITHUB_CARBON_PAT%"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                    token = "%GITHUB_CARBON_PAT%"
+>>>>>>> template/carbonengine/pathfinder-updates
                 }
             }
         }
@@ -177,7 +410,31 @@ class CarbonBuildMacOS(buildName: String, configType: String, preset: String, ag
             failBuild = true
         }
         sshAgent {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
             teamcitySshKey = "ccpgames-evetech GitHub"
+=======
+            teamcitySshKey = "ccpgames-carbon"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+            teamcitySshKey = "ccpgames-carbon"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+            teamcitySshKey = "ccpgames-carbon"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+            teamcitySshKey = "ccpgames-carbon"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+            teamcitySshKey = "ccpgames-carbon"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+            teamcitySshKey = "ccpgames-carbon"
+>>>>>>> template/carbonengine/pathfinder-updates
         }
         provideAwsCredentials {
             awsConnectionId = "Carbon_AwsVcpkgBinaryCacheServiceAccount"
