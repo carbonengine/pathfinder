@@ -9,6 +9,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Copyright © 2026 CCP ehf.
 
 =======
@@ -42,11 +43,16 @@ import jetbrains.buildServer.configs.kotlin.buildFeatures.pullRequests
 =======
 >>>>>>> template/carbonengine/pathfinder-updates
 =======
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
 package _Self.buildTypes
 
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildFeatures.PullRequests
 import jetbrains.buildServer.configs.kotlin.buildFeatures.pullRequests
+<<<<<<< HEAD
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
 >>>>>>> template/carbonengine/pathfinder-updates
 import jetbrains.buildServer.configs.kotlin.buildFeatures.vcsLabeling
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
@@ -64,7 +70,11 @@ class UniversalBuild() : BuildType({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         param("carbon-pipeline-tools-ref", "refs/heads/main")
+=======
+        param("carbon-pipeline-tools-ref", "refs/tags/v0.1.0")
+>>>>>>> template/carbonengine/pathfinder-updates
 =======
         param("carbon-pipeline-tools-ref", "refs/tags/v0.1.0")
 >>>>>>> template/carbonengine/pathfinder-updates
@@ -110,6 +120,7 @@ class UniversalBuild() : BuildType({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     artifactRules = "%universal-output-dir%"
 =======
     artifactRules = "%universal-output-dir% => artifact.zip"
@@ -135,6 +146,8 @@ class UniversalBuild() : BuildType({
 >>>>>>> template/carbonengine/pathfinder-updates
 =======
 >>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
     artifactRules = "%universal-output-dir% => artifact.zip"
 
     vcs {
@@ -142,6 +155,9 @@ class UniversalBuild() : BuildType({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
 >>>>>>> template/carbonengine/pathfinder-updates
 =======
 >>>>>>> template/carbonengine/pathfinder-updates
@@ -212,7 +228,11 @@ class UniversalBuild() : BuildType({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 artifactRules = "**/*=>%system.teamcity.build.workingDir%/arm64"
+=======
+                artifactRules = "artifact.zip!**=>%system.teamcity.build.workingDir%/arm64"
+>>>>>>> template/carbonengine/pathfinder-updates
 =======
                 artifactRules = "artifact.zip!**=>%system.teamcity.build.workingDir%/arm64"
 >>>>>>> template/carbonengine/pathfinder-updates
@@ -261,7 +281,11 @@ class UniversalBuild() : BuildType({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 artifactRules = "**/*=>%system.teamcity.build.workingDir%/x64"
+=======
+                artifactRules = "artifact.zip!**=>%system.teamcity.build.workingDir%/x64"
+>>>>>>> template/carbonengine/pathfinder-updates
 =======
                 artifactRules = "artifact.zip!**=>%system.teamcity.build.workingDir%/x64"
 >>>>>>> template/carbonengine/pathfinder-updates
@@ -311,7 +335,11 @@ class UniversalBuild() : BuildType({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 artifactRules = "**/*=>%system.teamcity.build.workingDir%/arm64"
+=======
+                artifactRules = "artifact.zip!**=>%system.teamcity.build.workingDir%/arm64"
+>>>>>>> template/carbonengine/pathfinder-updates
 =======
                 artifactRules = "artifact.zip!**=>%system.teamcity.build.workingDir%/arm64"
 >>>>>>> template/carbonengine/pathfinder-updates
@@ -360,7 +388,11 @@ class UniversalBuild() : BuildType({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 artifactRules = "**/*=>%system.teamcity.build.workingDir%/x64"
+=======
+                artifactRules = "artifact.zip!**=>%system.teamcity.build.workingDir%/x64"
+>>>>>>> template/carbonengine/pathfinder-updates
 =======
                 artifactRules = "artifact.zip!**=>%system.teamcity.build.workingDir%/x64"
 >>>>>>> template/carbonengine/pathfinder-updates
@@ -410,7 +442,11 @@ class UniversalBuild() : BuildType({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 artifactRules = "**/*=>%system.teamcity.build.workingDir%/arm64"
+=======
+                artifactRules = "artifact.zip!**=>%system.teamcity.build.workingDir%/arm64"
+>>>>>>> template/carbonengine/pathfinder-updates
 =======
                 artifactRules = "artifact.zip!**=>%system.teamcity.build.workingDir%/arm64"
 >>>>>>> template/carbonengine/pathfinder-updates
@@ -459,7 +495,11 @@ class UniversalBuild() : BuildType({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 artifactRules = "**/*=>%system.teamcity.build.workingDir%/x64"
+=======
+                artifactRules = "artifact.zip!**=>%system.teamcity.build.workingDir%/x64"
+>>>>>>> template/carbonengine/pathfinder-updates
 =======
                 artifactRules = "artifact.zip!**=>%system.teamcity.build.workingDir%/x64"
 >>>>>>> template/carbonengine/pathfinder-updates
@@ -509,7 +549,11 @@ class UniversalBuild() : BuildType({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 artifactRules = "**/*=>%system.teamcity.build.workingDir%/arm64"
+=======
+                artifactRules = "artifact.zip!**=>%system.teamcity.build.workingDir%/arm64"
+>>>>>>> template/carbonengine/pathfinder-updates
 =======
                 artifactRules = "artifact.zip!**=>%system.teamcity.build.workingDir%/arm64"
 >>>>>>> template/carbonengine/pathfinder-updates
@@ -558,7 +602,11 @@ class UniversalBuild() : BuildType({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 artifactRules = "**/*=>%system.teamcity.build.workingDir%/x64"
+=======
+                artifactRules = "artifact.zip!**=>%system.teamcity.build.workingDir%/x64"
+>>>>>>> template/carbonengine/pathfinder-updates
 =======
                 artifactRules = "artifact.zip!**=>%system.teamcity.build.workingDir%/x64"
 >>>>>>> template/carbonengine/pathfinder-updates
@@ -597,7 +645,10 @@ class UniversalBuild() : BuildType({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
 =======
 >>>>>>> template/carbonengine/pathfinder-updates
 =======
@@ -613,9 +664,13 @@ class UniversalBuild() : BuildType({
                 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 filterAuthorRole = PullRequests.GitHubRoleFilter.EVERYBODY
 =======
                 filterAuthorRole = GitHubRoleFilter.EVERYBODY
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                filterAuthorRole = PullRequests.GitHubRoleFilter.EVERYBODY
 >>>>>>> template/carbonengine/pathfinder-updates
 =======
                 filterAuthorRole = PullRequests.GitHubRoleFilter.EVERYBODY
@@ -627,6 +682,9 @@ class UniversalBuild() : BuildType({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
 >>>>>>> template/carbonengine/pathfinder-updates
 =======
 >>>>>>> template/carbonengine/pathfinder-updates
