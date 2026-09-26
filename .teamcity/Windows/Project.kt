@@ -10,8 +10,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Copyright © 2025 CCP ehf.
 
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
 =======
 >>>>>>> template/carbonengine/pathfinder-updates
 =======
@@ -44,7 +47,10 @@ import jetbrains.buildServer.configs.kotlin.*
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import jetbrains.buildServer.configs.kotlin.buildFeatures.PullRequests
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
 =======
 >>>>>>> template/carbonengine/pathfinder-updates
 =======
@@ -58,6 +64,10 @@ import jetbrains.buildServer.configs.kotlin.buildFeatures.nuGetFeedCredentials
 import jetbrains.buildServer.configs.kotlin.buildFeatures.perfmon
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import jetbrains.buildServer.configs.kotlin.buildFeatures.PullRequests
+>>>>>>> template/carbonengine/pathfinder-updates
 =======
 import jetbrains.buildServer.configs.kotlin.buildFeatures.PullRequests
 >>>>>>> template/carbonengine/pathfinder-updates
@@ -91,6 +101,7 @@ object Project : Project({
 })
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 class CarbonBuildWindows(buildName: String, configType: String, preset: String) : BuildType({
     id(buildName.toId())
@@ -138,17 +149,23 @@ class CarbonBuildWindows(buildName: String, configType: String, preset: String) 
     artifactRules = "%env.CMAKE_INSTALL_PREFIX% => artifact.zip"
 >>>>>>> template/carbonengine/pathfinder-updates
 =======
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
 class CarbonBuildWindows(buildName: String, configType: String, preset: String, vsDevBatSwitches: String = "-arch=x64 -vcvars_ver=14.51") : BuildType({
     id(buildName.toId())
     this.name = buildName
 
     artifactRules = "%env.CMAKE_INSTALL_PREFIX% => artifact.zip"
+<<<<<<< HEAD
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
 >>>>>>> template/carbonengine/pathfinder-updates
 
     params {
         param("env.GIT_TAG_HASH_OVERRIDE", "")
         param("github_checkout_folder", "github")
         param("env.CTEST_JUNIT_OUTPUT_FILE", "ctest_results.xml")
+<<<<<<< HEAD
 <<<<<<< HEAD
         select("env.VISUAL_STUDIO_PLATFORM_TOOLSET", "v141", label = "Visual Studio Platform Toolset", description = "Specify the toolset for the build. e.g. v141 or v143.",
                 options = listOf("v141 (2017)" to "v141", "v143 (2022)" to "v143"))
@@ -171,6 +188,9 @@ class CarbonBuildWindows(buildName: String, configType: String, preset: String, 
 >>>>>>> template/carbonengine/pathfinder-updates
 =======
         param("VS_DEV_BAT_SWITCHES", "-arch=x64")
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+        param("VS_DEV_BAT_SWITCHES", vsDevBatSwitches)
 >>>>>>> template/carbonengine/pathfinder-updates
 =======
         param("VS_DEV_BAT_SWITCHES", vsDevBatSwitches)
@@ -228,6 +248,7 @@ class CarbonBuildWindows(buildName: String, configType: String, preset: String, 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 call "%%ProgramFiles(x86)%%\Microsoft Visual Studio\2017\BuildTools\Common7\Tools\vsdevcmd.bat" -arch=x64
 =======
                 call "%env.VSDEV_BAT_PATH%" -arch=x64
@@ -246,6 +267,9 @@ class CarbonBuildWindows(buildName: String, configType: String, preset: String, 
 >>>>>>> template/carbonengine/pathfinder-updates
 =======
                 call "%env.VSDEV_BAT_PATH%" -arch=x64
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                call "%env.VSDEV_BAT_PATH%" %VS_DEV_BAT_SWITCHES%
 >>>>>>> template/carbonengine/pathfinder-updates
 =======
                 call "%env.VSDEV_BAT_PATH%" %VS_DEV_BAT_SWITCHES%
@@ -319,7 +343,11 @@ class CarbonBuildWindows(buildName: String, configType: String, preset: String, 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 echo ${'$'}symstoreFlags = ^@^("add","/compress","/t", "CCP Games", "/c", "TeamCity %build.number%", "/s", "${'$'}Env:TC_SYMBOL_STORE_PATH", "/o", "/r",  "/f", "%env.CMAKE_BUILD_FOLDER%"^) 
+=======
+                echo ${'$'}symstoreFlags = ^@^("add","/compress","/t", "CCP Games", "/c", "TeamCity %build.number%", "/s", "${'$'}Env:TC_SYMBOL_STORE_PATH", "/o", "/r",  "/f", "%env.CMAKE_BUILD_FOLDER%"^)
+>>>>>>> template/carbonengine/pathfinder-updates
 =======
                 echo ${'$'}symstoreFlags = ^@^("add","/compress","/t", "CCP Games", "/c", "TeamCity %build.number%", "/s", "${'$'}Env:TC_SYMBOL_STORE_PATH", "/o", "/r",  "/f", "%env.CMAKE_BUILD_FOLDER%"^)
 >>>>>>> template/carbonengine/pathfinder-updates
@@ -369,7 +397,11 @@ class CarbonBuildWindows(buildName: String, configType: String, preset: String, 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     
+=======
+
+>>>>>>> template/carbonengine/pathfinder-updates
 =======
 
 >>>>>>> template/carbonengine/pathfinder-updates
@@ -404,6 +436,7 @@ class CarbonBuildWindows(buildName: String, configType: String, preset: String, 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     
                     ${'$'}stored = get-content symstore.txt | Select-String "^SYMSTORE: Number of files stored = (.*)${'$'}"
                     ${'$'}stored = ${'$'}stored.Matches.Groups[1].Value
@@ -425,6 +458,8 @@ class CarbonBuildWindows(buildName: String, configType: String, preset: String, 
 >>>>>>> template/carbonengine/pathfinder-updates
 =======
 >>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
 
                     ${'$'}stored = get-content symstore.txt | Select-String "^SYMSTORE: Number of files stored = (.*)${'$'}"
                     ${'$'}stored = ${'$'}stored.Matches.Groups[1].Value
@@ -440,6 +475,9 @@ class CarbonBuildWindows(buildName: String, configType: String, preset: String, 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
 >>>>>>> template/carbonengine/pathfinder-updates
 =======
 >>>>>>> template/carbonengine/pathfinder-updates
@@ -472,6 +510,7 @@ class CarbonBuildWindows(buildName: String, configType: String, preset: String, 
             vcsRootExtId = "${DslContext.settingsRootId.id}"
             provider = github {
                 authType = token {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -539,6 +578,11 @@ class CarbonBuildWindows(buildName: String, configType: String, preset: String, 
                 }
                 filterAuthorRole = PullRequests.GitHubRoleFilter.EVERYBODY
 >>>>>>> template/carbonengine/pathfinder-updates
+=======
+                    token = "%GITHUB_CARBON_PAT%"
+                }
+                filterAuthorRole = PullRequests.GitHubRoleFilter.EVERYBODY
+>>>>>>> template/carbonengine/pathfinder-updates
             }
         }
         commitStatusPublisher {
@@ -557,7 +601,11 @@ class CarbonBuildWindows(buildName: String, configType: String, preset: String, 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     token = "%GITHUB_TEAMCITY_TOKEN%"
+=======
+                    token = "%GITHUB_CARBON_PAT%"
+>>>>>>> template/carbonengine/pathfinder-updates
 =======
                     token = "%GITHUB_CARBON_PAT%"
 >>>>>>> template/carbonengine/pathfinder-updates
@@ -614,7 +662,11 @@ class CarbonBuildWindows(buildName: String, configType: String, preset: String, 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             teamcitySshKey = "ccpgames-evetech GitHub"
+=======
+            teamcitySshKey = "ccpgames-carbon"
+>>>>>>> template/carbonengine/pathfinder-updates
 =======
             teamcitySshKey = "ccpgames-carbon"
 >>>>>>> template/carbonengine/pathfinder-updates

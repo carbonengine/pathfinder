@@ -76,6 +76,12 @@ function(create_carbon_docs_sphinx_target)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    message(STATUS "Working directory is ${CMAKE_CURRENT_BINARY_DIR}")
+    message(STATUS "Command: ${SPHINX_COMMAND}")
+
+>>>>>>> template/carbonengine/pathfinder-updates
 =======
     message(STATUS "Working directory is ${CMAKE_CURRENT_BINARY_DIR}")
     message(STATUS "Command: ${SPHINX_COMMAND}")
