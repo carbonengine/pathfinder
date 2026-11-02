@@ -31,4 +31,8 @@ __pycache__/
 CMakeUserPresets.json
 
 .cmake-build*
+<<<<<<< HEAD
 cmake-build*
+=======
+cmake-build*
+>>>>>>> template/carbonengine/pathfinder-updates

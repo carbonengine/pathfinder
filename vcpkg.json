@@ -1,6 +1,20 @@
 {
   "dependencies": [
     {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
       "name": "carbon-blueexposure",
       "version>=": "2.1.1"
     },
@@ -11,6 +25,10 @@
     {
       "name": "carbon-exefile-interpreter",
       "version>=": "1.1.1",
+=======
+      "name": "python3",
+      "version>=": "3.12.9#1",
+>>>>>>> template/carbonengine/pathfinder-updates
       "host": true
     }
   ],
@@ -18,6 +36,39 @@
     {
       "name": "openssl",
       "version": "1.1.1k#8"
+<<<<<<< HEAD
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+      "name": "openssl",
+      "version": "1.1.1k#8"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+      "name": "openssl",
+      "version": "1.1.1k#8"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
     }
   ]
 }

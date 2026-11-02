@@ -1,16 +1,89 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 // Copyright © 2025 CCP ehf.
 
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
 package Windows
 
 import jetbrains.buildServer.configs.kotlin.DslContext
 import jetbrains.buildServer.configs.kotlin.Project
 import jetbrains.buildServer.configs.kotlin.*
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 import jetbrains.buildServer.configs.kotlin.buildFeatures.PullRequests
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
 import jetbrains.buildServer.configs.kotlin.buildFeatures.XmlReport
 import jetbrains.buildServer.configs.kotlin.buildFeatures.commitStatusPublisher
 import jetbrains.buildServer.configs.kotlin.buildFeatures.freeDiskSpace
 import jetbrains.buildServer.configs.kotlin.buildFeatures.nuGetFeedCredentials
 import jetbrains.buildServer.configs.kotlin.buildFeatures.perfmon
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import jetbrains.buildServer.configs.kotlin.buildFeatures.PullRequests
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+import jetbrains.buildServer.configs.kotlin.buildFeatures.PullRequests
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+import jetbrains.buildServer.configs.kotlin.buildFeatures.PullRequests
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+import jetbrains.buildServer.configs.kotlin.buildFeatures.PullRequests
+>>>>>>> template/carbonengine/pathfinder-updates
 import jetbrains.buildServer.configs.kotlin.buildFeatures.pullRequests
 import jetbrains.buildServer.configs.kotlin.buildFeatures.sshAgent
 import jetbrains.buildServer.configs.kotlin.buildFeatures.xmlReport
@@ -139,7 +212,39 @@ class CarbonBuildWindows(buildName: String, configType: String, preset: String, 
                 echo ${'$'}Credential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList ${'$'}User, ${'$'}Password
                 echo New-PSDrive -Name "symbols" -PSProvider FileSystem -Root ${'$'}Env:TC_SYMBOL_STORE_PATH -Credential ${'$'}Credential
                 echo Write-Host "##teamcity[progressMessage 'Storing symbols']"
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
                 echo ${'$'}symstoreFlags = ^@^("add","/compress","/t", "CCP Games", "/c", "TeamCity %build.number%", "/s", "${'$'}Env:TC_SYMBOL_STORE_PATH", "/o", "/r",  "/f", "%env.CMAKE_BUILD_FOLDER%"^) 
+=======
+                echo ${'$'}symstoreFlags = ^@^("add","/compress","/t", "CCP Games", "/c", "TeamCity %build.number%", "/s", "${'$'}Env:TC_SYMBOL_STORE_PATH", "/o", "/r",  "/f", "%env.CMAKE_BUILD_FOLDER%"^)
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                echo ${'$'}symstoreFlags = ^@^("add","/compress","/t", "CCP Games", "/c", "TeamCity %build.number%", "/s", "${'$'}Env:TC_SYMBOL_STORE_PATH", "/o", "/r",  "/f", "%env.CMAKE_BUILD_FOLDER%"^)
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                echo ${'$'}symstoreFlags = ^@^("add","/compress","/t", "CCP Games", "/c", "TeamCity %build.number%", "/s", "${'$'}Env:TC_SYMBOL_STORE_PATH", "/o", "/r",  "/f", "%env.CMAKE_BUILD_FOLDER%"^)
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                echo ${'$'}symstoreFlags = ^@^("add","/compress","/t", "CCP Games", "/c", "TeamCity %build.number%", "/s", "${'$'}Env:TC_SYMBOL_STORE_PATH", "/o", "/r",  "/f", "%env.CMAKE_BUILD_FOLDER%"^)
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                echo ${'$'}symstoreFlags = ^@^("add","/compress","/t", "CCP Games", "/c", "TeamCity %build.number%", "/s", "${'$'}Env:TC_SYMBOL_STORE_PATH", "/o", "/r",  "/f", "%env.CMAKE_BUILD_FOLDER%"^)
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                echo ${'$'}symstoreFlags = ^@^("add","/compress","/t", "CCP Games", "/c", "TeamCity %build.number%", "/s", "${'$'}Env:TC_SYMBOL_STORE_PATH", "/o", "/r",  "/f", "%env.CMAKE_BUILD_FOLDER%"^)
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                echo ${'$'}symstoreFlags = ^@^("add","/compress","/t", "CCP Games", "/c", "TeamCity %build.number%", "/s", "${'$'}Env:TC_SYMBOL_STORE_PATH", "/o", "/r",  "/f", "%env.CMAKE_BUILD_FOLDER%"^)
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+                echo ${'$'}symstoreFlags = ^@^("add","/compress","/t", "CCP Games", "/c", "TeamCity %build.number%", "/s", "${'$'}Env:TC_SYMBOL_STORE_PATH", "/o", "/r",  "/f", "%env.CMAKE_BUILD_FOLDER%"^)
+>>>>>>> template/carbonengine/pathfinder-updates
                 echo ^& ${'$'}Env:TC_SYMSTORE_PATH ${'$'}symstoreFlags ^| Tee-Object -file symstore.txt
                 echo ${'$'}stored = get-content symstore.txt ^| Select-String "^SYMSTORE: Number of files stored = (.*)${'$'}"
                 echo ${'$'}stored = ${'$'}stored.Matches.Groups[1].Value
@@ -165,7 +270,39 @@ class CarbonBuildWindows(buildName: String, configType: String, preset: String, 
                     ${'$'}Password = ConvertTo-SecureString -String "%DOMAIN_USER_PASSWORD%" -AsPlainText -Force
                     ${'$'}Credential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList ${'$'}User, ${'$'}Password
                     New-PSDrive -Name "symbols" -PSProvider FileSystem -Root ${'$'}Env:TC_SYMBOL_STORE_PATH -Credential ${'$'}Credential
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
                     
+=======
+
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+
+>>>>>>> template/carbonengine/pathfinder-updates
                     Write-Host "##teamcity[progressMessage 'Storing symbols']"
                     ${'$'}symstoreFlags = @("add",
                                      "/compress",
@@ -176,6 +313,14 @@ class CarbonBuildWindows(buildName: String, configType: String, preset: String, 
                                      "/r", # Recursive
                                      "/f", "%env.CMAKE_BUILD_FOLDER%") # source folder
                     & ${'$'}Env:TC_SYMSTORE_PATH ${'$'}symstoreFlags | Tee-Object -file symstore.txt
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
                     
                     ${'$'}stored = get-content symstore.txt | Select-String "^SYMSTORE: Number of files stored = (.*)${'$'}"
                     ${'$'}stored = ${'$'}stored.Matches.Groups[1].Value
@@ -186,6 +331,53 @@ class CarbonBuildWindows(buildName: String, configType: String, preset: String, 
                     ${'$'}ignored = get-content symstore.txt | Select-String "^SYMSTORE: Number of files ignored = (.*)${'$'}"
                     ${'$'}ignored = ${'$'}ignored.Matches.Groups[1].Value
                     
+=======
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+
+                    ${'$'}stored = get-content symstore.txt | Select-String "^SYMSTORE: Number of files stored = (.*)${'$'}"
+                    ${'$'}stored = ${'$'}stored.Matches.Groups[1].Value
+
+                    ${'$'}errors = get-content symstore.txt | Select-String "^SYMSTORE: Number of errors = (.*)${'$'}"
+                    ${'$'}errors = ${'$'}errors.Matches.Groups[1].Value
+
+                    ${'$'}ignored = get-content symstore.txt | Select-String "^SYMSTORE: Number of files ignored = (.*)${'$'}"
+                    ${'$'}ignored = ${'$'}ignored.Matches.Groups[1].Value
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
                     Write-Host "##teamcity[buildStatus text='Stored: ${'$'}stored, Errors: ${'$'}errors, Ignored: ${'$'}ignored']"
                 """.trimIndent()
             }

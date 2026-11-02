@@ -1,5 +1,47 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 // Copyright © 2025 CCP ehf.
 
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
 package _Self
 
 import _Self.buildTypes.*
@@ -10,7 +52,63 @@ import jetbrains.buildServer.configs.kotlin.vcs.GitVcsRoot
 
 object Project : Project({
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
     description = "Build / Publish pipeline for https://github.com/ccpgames/carbon-pathfinder"
+=======
+    description = "Build / Publish pipeline for https://github.com/ccpgames/carbon-template"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+    description = "Build / Publish pipeline for https://github.com/ccpgames/carbon-template"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+    description = "Build / Publish pipeline for https://github.com/ccpgames/carbon-template"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+    description = "Build / Publish pipeline for https://github.com/ccpgames/carbon-template"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+    description = "Build / Publish pipeline for https://github.com/ccpgames/carbon-template"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+    description = "Build / Publish pipeline for https://github.com/ccpgames/carbon-template"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+    description = "Build / Publish pipeline for https://github.com/ccpgames/carbon-template"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+    description = "Build / Publish pipeline for https://github.com/ccpgames/carbon-template"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+    description = "Build / Publish pipeline for https://github.com/ccpgames/carbon-template"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+    description = "Build / Publish pipeline for https://github.com/ccpgames/carbon-template"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+    description = "Build / Publish pipeline for https://github.com/ccpgames/carbon-template"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+    description = "Build / Publish pipeline for https://github.com/ccpgames/carbon-template"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+    description = "Build / Publish pipeline for https://github.com/ccpgames/carbon-template"
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+    description = "Build / Publish pipeline for https://github.com/ccpgames/carbon-template"
+>>>>>>> template/carbonengine/pathfinder-updates
 
     params {
         /* before changing carbon_ref, make sure to disable automatic settings synchronization on teamcity */
