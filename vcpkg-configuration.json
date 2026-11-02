@@ -8,6 +8,7 @@
     {
       "kind": "git",
       "repository": "https://github.com/carbonengine/vcpkg-registry.git",
+<<<<<<< HEAD
       "baseline": "f0325d62b39d94fcd91216ba8eb6786ce2c00364",
       "packages": ["python3", "carbon-*", "tracy", "greenlet", "ccp-debug-info", "crashpad", "zlib"]
 =======
@@ -78,6 +79,8 @@
 =======
 >>>>>>> template/carbonengine/pathfinder-updates
       "repository": "https://github.com/carbonengine/vcpkg-registry.git",
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
       "baseline": "bdd31d51ec7bb6e744b7c7c8871e84c2fd2296ec",
       "packages": [
         "python3",
@@ -91,6 +94,10 @@
     }
   ]
 <<<<<<< HEAD
+<<<<<<< HEAD
+}
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
 }
 >>>>>>> template/carbonengine/pathfinder-updates
 =======

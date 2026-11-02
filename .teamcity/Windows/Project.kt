@@ -11,8 +11,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Copyright © 2025 CCP ehf.
 
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
 =======
 >>>>>>> template/carbonengine/pathfinder-updates
 =======
@@ -48,7 +51,10 @@ import jetbrains.buildServer.configs.kotlin.*
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import jetbrains.buildServer.configs.kotlin.buildFeatures.PullRequests
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
 =======
 >>>>>>> template/carbonengine/pathfinder-updates
 =======
@@ -65,6 +71,10 @@ import jetbrains.buildServer.configs.kotlin.buildFeatures.perfmon
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import jetbrains.buildServer.configs.kotlin.buildFeatures.PullRequests
+>>>>>>> template/carbonengine/pathfinder-updates
 =======
 import jetbrains.buildServer.configs.kotlin.buildFeatures.PullRequests
 >>>>>>> template/carbonengine/pathfinder-updates
@@ -209,7 +219,11 @@ class CarbonBuildWindows(buildName: String, configType: String, preset: String, 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 echo ${'$'}symstoreFlags = ^@^("add","/compress","/t", "CCP Games", "/c", "TeamCity %build.number%", "/s", "${'$'}Env:TC_SYMBOL_STORE_PATH", "/o", "/r",  "/f", "%env.CMAKE_BUILD_FOLDER%"^) 
+=======
+                echo ${'$'}symstoreFlags = ^@^("add","/compress","/t", "CCP Games", "/c", "TeamCity %build.number%", "/s", "${'$'}Env:TC_SYMBOL_STORE_PATH", "/o", "/r",  "/f", "%env.CMAKE_BUILD_FOLDER%"^)
+>>>>>>> template/carbonengine/pathfinder-updates
 =======
                 echo ${'$'}symstoreFlags = ^@^("add","/compress","/t", "CCP Games", "/c", "TeamCity %build.number%", "/s", "${'$'}Env:TC_SYMBOL_STORE_PATH", "/o", "/r",  "/f", "%env.CMAKE_BUILD_FOLDER%"^)
 >>>>>>> template/carbonengine/pathfinder-updates
@@ -263,7 +277,11 @@ class CarbonBuildWindows(buildName: String, configType: String, preset: String, 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     
+=======
+
+>>>>>>> template/carbonengine/pathfinder-updates
 =======
 
 >>>>>>> template/carbonengine/pathfinder-updates
@@ -302,6 +320,7 @@ class CarbonBuildWindows(buildName: String, configType: String, preset: String, 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     
                     ${'$'}stored = get-content symstore.txt | Select-String "^SYMSTORE: Number of files stored = (.*)${'$'}"
                     ${'$'}stored = ${'$'}stored.Matches.Groups[1].Value
@@ -325,6 +344,8 @@ class CarbonBuildWindows(buildName: String, configType: String, preset: String, 
 >>>>>>> template/carbonengine/pathfinder-updates
 =======
 >>>>>>> template/carbonengine/pathfinder-updates
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
 
                     ${'$'}stored = get-content symstore.txt | Select-String "^SYMSTORE: Number of files stored = (.*)${'$'}"
                     ${'$'}stored = ${'$'}stored.Matches.Groups[1].Value
@@ -341,6 +362,9 @@ class CarbonBuildWindows(buildName: String, configType: String, preset: String, 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
 >>>>>>> template/carbonengine/pathfinder-updates
 =======
 >>>>>>> template/carbonengine/pathfinder-updates

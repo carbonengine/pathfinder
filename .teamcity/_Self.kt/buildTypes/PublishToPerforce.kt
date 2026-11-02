@@ -11,8 +11,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Copyright © 2025 CCP ehf.
 
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
 =======
 >>>>>>> template/carbonengine/pathfinder-updates
 =======
@@ -73,7 +76,11 @@ class Publish(perforce_publish_path: String) : BuildType({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         param("env.TC_BUILD_NUMBER", "Carbon Pathfinder #%build.number%")
+=======
+        param("env.TC_BUILD_NUMBER", "Carbon Template #%build.number%")
+>>>>>>> template/carbonengine/pathfinder-updates
 =======
         param("env.TC_BUILD_NUMBER", "Carbon Template #%build.number%")
 >>>>>>> template/carbonengine/pathfinder-updates
@@ -326,7 +333,11 @@ class Publish(perforce_publish_path: String) : BuildType({
             }
         }
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> template/carbonengine/pathfinder-updates
     requirements {
         contains("teamcity.agent.jvm.os.name", "Windows")
         doesNotContain("teamcity.agent.name", "TEST-AUTOM")
@@ -346,7 +357,11 @@ class Publish(perforce_publish_path: String) : BuildType({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 val PublishToPerforce = Publish("vendor/github.com/ccpgames/carbon-pathfinder")
+=======
+val PublishToPerforce = Publish("vendor/github.com/ccpgames/carbon-template")
+>>>>>>> template/carbonengine/pathfinder-updates
 =======
 val PublishToPerforce = Publish("vendor/github.com/ccpgames/carbon-template")
 >>>>>>> template/carbonengine/pathfinder-updates

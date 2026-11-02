@@ -11,8 +11,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Copyright © 2026 CCP ehf.
 
+=======
+>>>>>>> template/carbonengine/pathfinder-updates
 =======
 >>>>>>> template/carbonengine/pathfinder-updates
 =======
@@ -202,6 +205,7 @@ class UniversalBuild() : BuildType({
             }
         }
     }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -263,6 +267,9 @@ class UniversalBuild() : BuildType({
 =======
 >>>>>>> template/carbonengine/pathfinder-updates
 =======
+>>>>>>> template/carbonengine/pathfinder-updates
+=======
+    
 >>>>>>> template/carbonengine/pathfinder-updates
     requirements {
         startsWith("teamcity.agent.jvm.os.name", "Mac OS X")
