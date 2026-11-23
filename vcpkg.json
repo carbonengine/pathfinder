@@ -2,20 +2,16 @@
   "dependencies": [
     {
       "name": "carbon-blueexposure",
-      "version>=": "2.1.1"
+      "version>=": "2.3.0"
     },
     {
       "name": "carbon-core",
-      "version>=": "3.3.0#1"
+      "version>=": "3.3.1"
     },
     {
       "name": "carbon-exefile-interpreter",
-      "version>=": "1.1.1",
+      "version>=": "1.2.0",
       "host": true
-    },
-    {
-      "name": "python3",
-      "version>=": "3.12.16"
     }
   ]
 }
