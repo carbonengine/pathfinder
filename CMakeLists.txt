@@ -53,18 +53,20 @@ target_precompile_headers(EvePathfinder PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/stda
 target_include_directories(EvePathfinder PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 target_include_directories(EvePathfinder PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../../../carbon/src)
 
-if(APPLE)
+if(APPLE OR LINUX)
     set_target_properties(
         EvePathfinder
         PROPERTIES
             PREFIX ""
             SUFFIX ".so"
     )
+endif()
+if(APPLE)
     target_link_libraries(EvePathfinder PRIVATE "-framework CoreFoundation -framework Cocoa")
 endif()
 set_target_properties(EvePathfinder PROPERTIES OUTPUT_NAME "_pyevepathfinder")
 
-if(WIN32)
+if(WIN32 OR LINUX)
     if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
         option(BUILD_TESTING "Build and run tests" ON)
         include(CTest)
@@ -81,7 +83,7 @@ if(WIN32)
 
             if (WIN32)
                 set(PYTHONPATH "${PYTHONPATH}\;$<TARGET_FILE_DIR:EvePathfinder>\;${CMAKE_CURRENT_SOURCE_DIR}/python")
-            elseif(APPLE)
+            elseif(APPLE OR LINUX)
                 set(PYTHONPATH "${PYTHONPATH}:$<TARGET_FILE_DIR:EvePathfinder>:${CMAKE_CURRENT_SOURCE_DIR}/python")
             endif ()
 
